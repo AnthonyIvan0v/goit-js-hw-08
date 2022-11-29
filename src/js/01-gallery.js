@@ -13,11 +13,9 @@ galleryRef.innerHTML= cardsGallery;
 
 function createItemGallery(element) {
     return element.map(({ preview, original, description }) => {
-        return `<li>
-                    <a class="gallery__item" href="${original}">
+        return `<a class="gallery__item" href="${original}">
                         <img class="gallery__image" src="${preview}" data-source="${original}" alt="${description}"/>
-                    </a>
-                </li>`}).join('');
+                    </a>`}).join('');
 };
 
 
